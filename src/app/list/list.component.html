@@ -1,0 +1,22 @@
+<div>
+        <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let each of data">
+                        <th scope="row">{{each.id}}</th>
+                        <td>{{each.fname}} {{each.lname}}</td>
+                        <td>{{each.address}}</td>
+                        <td>{{each.pNum}}</td>
+                        <td><span (click)="edit(each.id)" class="glyphicon glyphicon-pencil btn"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+</div>
