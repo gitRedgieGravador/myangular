@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
+import {Client} from '../data/client.data'
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -7,7 +9,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  @Input() data: Object[]
+  @Input() data: Client[]
   @Output() EditEmit = new EventEmitter()
 
   constructor() { }

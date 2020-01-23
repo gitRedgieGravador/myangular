@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { $ } from 'protractor';
+
+import {Client} from '../data/client.data'
 
 @Component({
   selector: 'app-form',
@@ -13,8 +14,8 @@ export class FormComponent implements OnInit {
   address:String;
   pNum:String;
 
-  dataArray:Object[]=[];
-  data:Object;
+  dataArray:Client[]=[];
+  data:Client;
   autoId = 0;
   constructor() { }
 
@@ -32,7 +33,6 @@ export class FormComponent implements OnInit {
     }
     this.dataArray.push(this.data)
     console.log(this.dataArray);
-    $("input").val("");
   }
   editData(id){
     this.dataArray.forEach(element => {
