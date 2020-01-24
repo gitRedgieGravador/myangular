@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import {Client} from '../data/client.data'
+import { Client } from '../data/client.data'
+
 
 @Component({
   selector: 'app-form',
@@ -10,39 +11,64 @@ import {Client} from '../data/client.data'
 export class FormComponent implements OnInit {
 
   fname: String;
-  lname:String;
-  address:String;
-  pNum:String;
+  lname: String;
+  address: String;
+  pNum: String;
 
-  dataArray:Client[]=[];
-  data:Client;
+  dataArray: Client[] = [];
+  data: Client;
   autoId = 0;
+  editId = 0;
+  editing = false;
+  showTable = false
+
   constructor() { }
 
   ngOnInit() {
+
   }
 
-  submit(){
+  submit() {
     this.autoId++;
     this.data = {
-      id:this.autoId,
+      id: this.autoId,
       fname: this.fname,
       lname: this.lname,
       address: this.address,
       pNum: this.pNum
     }
     this.dataArray.push(this.data)
-    console.log(this.dataArray);
+    this.showTable = true
+    $("input").val("")
   }
-  editData(id){
-    this.dataArray.forEach(element => {
-      if(element.id == id){
-        this.fname = element.fname
-        this.lname = element.lname
-        this.address = element.address
-        this.pNum = element.pNum
+  editData(client) {
+    this.showTable = false
+    this.fname = client.fname
+    this.lname = client.lname
+    this.address = client.address
+    this.pNum = client.pNum
+    this.editId = client.id
+    this.editing = true
+
+  };
+
+  save() {
+    for (let iterator of this.dataArray) {
+      console.log(iterator.id);
+      if (iterator.id == this.editId) {
+        iterator.fname = this.fname
+        iterator.lname = this.lname
+        iterator.address = this.address
+        iterator.pNum = this.pNum
+        this.editing = false
+        this.showTable = true
       }
-    });
+    }
   }
 
+  goBackForm(){
+    this.showTable = false
+  }
 }
+
+

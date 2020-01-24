@@ -11,13 +11,21 @@ export class ListComponent implements OnInit {
 
   @Input() data: Client[]
   @Output() EditEmit = new EventEmitter()
+  @Output() backEmit = new EventEmitter()
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  edit(id){
-    this.EditEmit.emit(id)
+  edit(client){
+    this.EditEmit.emit(client)
+  }
+  goCreateLoan(){
+    alert("create Loan")
+  }
+
+  showDetail(){
+    alert("show Datails")
   }
 }

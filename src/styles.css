@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+.pd10 {
+    padding:10px;
+}
+.size100 {
+    font-size: 100PX;
+    height: 50px;
+    margin-top: -100px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns:auto auto;
+    grid-gap: 10px;
+  }
+
+  .center {
+      margin: auto;
+  }
+
+  @media screen and (max-width: 767px) {
+    .grid-container {
+        grid-template-columns:auto;
+      }
+  }
+.h-150 {
+    height: 100px;
+}
+.border {
+    border: solid 1 px black;
+}

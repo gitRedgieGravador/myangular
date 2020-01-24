@@ -1,13 +1,4 @@
-.pd10 {
-    padding:10px;
-}
 
-.grid-container {
-    display: grid;
-    grid-template-columns:auto auto;
-    grid-gap: 10px;
-  }
-
-  .center {
-      margin: auto;
+  .btn {
+      width: 200px !important;
   }
