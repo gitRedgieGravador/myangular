@@ -22,8 +22,8 @@
                     <input type="text" id="pnumber" class="form-control" placeholder="Phone Number" [(ngModel)]="pNum" [ngModelOptions]="{standalone: true}"/>
                 </div>
             </div>
-            <button *ngIf="!editing" class="btn btn-outline-primary" (click)="$event.preventDefault(); submit()">Submit</button>
-            <button *ngIf="editing" class="btn btn-outline-success" (click)="$event.preventDefault(); save()">Save</button>
+            <button *ngIf="!editing" class="btn btn-outline-primary mdi mdi-database" (click)="$event.preventDefault(); submit()">Submit</button>
+            <button *ngIf="editing" class="btn btn-outline-success mid mdi-database" (click)="$event.preventDefault(); save()">Save</button>
         </form>
     </div>
 </div>
