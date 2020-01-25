@@ -39,7 +39,6 @@ export class FormComponent implements OnInit {
     }
     this.dataArray.push(this.data)
     this.showTable = true
-    $("input").val("")
   }
   editData(client) {
     this.showTable = false

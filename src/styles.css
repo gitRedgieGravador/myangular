@@ -28,3 +28,6 @@
 .border {
     border: solid 1 px black;
 }
+.left-50 {
+    margin-left: 50px;
+}

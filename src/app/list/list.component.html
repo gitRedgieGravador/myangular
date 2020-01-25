@@ -1,7 +1,11 @@
 <div>
     <div class="row h-150">
-        <div class="col-4"><div class="size100 btn" (click)="backEmit.emit()">&#8592;</div></div>
-        <div class="col"><h1>Client List</h1></div>
+        <div class="col-4">
+            <div class="size100 btn" (click)="backEmit.emit()">&#8592;</div>
+        </div>
+        <div class="col">
+            <h1>Client List</h1>
+        </div>
     </div>
 
     <table class="table">
@@ -20,7 +24,11 @@
                 <td>{{each.fname}} {{each.lname}}</td>
                 <td>{{each.address}}</td>
                 <td>{{each.pNum}}</td>
-                <td><i (click)="edit(each)" class="mdi mdi-pen btn"></i> <i (click)="showDetail()" class="mdi mdi-information-outline btn"></i> <i class="btn border" (click)="goCreateLoan()"><i class="mdi mdi-currency-usd"></i> <i class="mdi mdi-forward"></i></i></td>
+                <td>
+                    <i (click)="edit(each)" class="mdi mdi-pen btn"></i>
+                    <i (click)="showDetail()" class="mdi mdi-information-outline btn"></i>
+                    <i class="btn border" (click)="goCreateLoan()">
+                    <i class="mdi mdi-currency-usd"></i> <i class="mdi mdi-forward"></i></i></td>
             </tr>
         </tbody>
     </table>

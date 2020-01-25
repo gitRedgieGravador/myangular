@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import {Client} from '../data/client.data'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -13,7 +14,7 @@ export class ListComponent implements OnInit {
   @Output() EditEmit = new EventEmitter()
   @Output() backEmit = new EventEmitter()
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -22,7 +23,7 @@ export class ListComponent implements OnInit {
     this.EditEmit.emit(client)
   }
   goCreateLoan(){
-    alert("create Loan")
+    this.router.navigate(['loan'])
   }
 
   showDetail(){
