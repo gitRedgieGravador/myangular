@@ -2,3 +2,7 @@
   .btn {
       width: 200px !important;
   }
+
+  .card{
+    background-color: var( --accent-color);
+  }
