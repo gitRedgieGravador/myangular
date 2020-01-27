@@ -8,12 +8,18 @@
 
   <div class="row">
     <button (click)="showAim()" class="col btn mdi mdi-table">Show AMI</button>
+    
+    <!-- There is many way to naviguate you can also do it like that : 
+    <button routerLink="ami" class="col btn mdi mdi-table">Show AMI</button>
+    <button [routerLink]="['ami']" class="col btn mdi mdi-table">Show AMI</button> -->
+    
   </div>
 
 
   <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
 
     <svg id="twitter-logo" height="24" data-name="Logo — FIXED" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+      <!-- I am not familiar with the defs tags but it's really weird to find a css part in this file -->
       <defs>
         <style>
           .cls-1 {
