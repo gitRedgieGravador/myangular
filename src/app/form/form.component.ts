@@ -22,12 +22,14 @@ export class FormComponent implements OnInit {
   editing = false;
   showTable = false
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
-
+    alert(this.getConfig("https://qofbe721ad.execute-api.us-east-1.amazonaws.com/dev/upload"));
   }
-
+  getConfig(configUrl) {
+    return this.http.get(configUrl);
+  }
   submit() {
     this.autoId++;
     this.data = {
